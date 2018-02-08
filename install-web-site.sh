@@ -17,6 +17,9 @@ elif [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin/java" ]];  then
     _java="$JAVA_HOME/bin/java"
 else
     echo "Install Java..."
+    sudo apt-get update
+    sudo apt-get -y install default-jre
+    sudo apt-get -y install default-jdk
    
 fi
 

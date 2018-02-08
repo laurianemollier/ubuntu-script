@@ -65,7 +65,7 @@ fi
 git clone https://github.com/laurianemollier/software-factory-website.git
 
 
-
+sudo apt-get update
 # heroku
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
@@ -73,6 +73,7 @@ wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 sudo apt-get update
 sudo apt-get install -y postgresql postgresql-contrib
 sudo -i -u postgres createdb software_factory
+sudo apt-get update
 
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD '123123';"
 sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --username=postgres

@@ -69,7 +69,7 @@ sudo apt-get install -y postgresql postgresql-contrib
 sudo -i -u postgres createdb software_factory
 
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD '123123';"
-sudo -i -u postgres createdb q --host=localhost --port=5432 --username=postgres
+sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --username=postgres
 
 
 

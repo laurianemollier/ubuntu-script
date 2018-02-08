@@ -5,6 +5,10 @@ echo "That the installation begins!!"
 
 # Install Java 
 
+sudo apt-get update
+sudo apt-get -y install default-jre
+sudo apt-get -y install default-jdk
+
 if type -p java; then
     echo Found java executable in PATH
     _java=java
@@ -13,9 +17,7 @@ elif [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin/java" ]];  then
     _java="$JAVA_HOME/bin/java"
 else
     echo "Install Java..."
-    sudo apt-get update
-    sudo apt-get -y install default-jre
-    sudo apt-get -y install default-jdk
+   
 fi
 
 if [[ "$_java" ]]; then

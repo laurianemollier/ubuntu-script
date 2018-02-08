@@ -60,4 +60,34 @@ else
     echo "Git is already installed"
 fi
 
+# heroku
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+#postgresql
+sudo apt-get update
+sudo apt-get install -y postgresql postgresql-contrib
+sudo -i -u postgres createdb software_factory
+
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD '123123';"
+sudo -i -u postgres createdb q --host=localhost --port=5432 --username=postgres
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 git clone https://github.com/laurianemollier/software-factory-website.git

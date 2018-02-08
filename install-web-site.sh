@@ -51,14 +51,18 @@ fi
 
 
 
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' git |grep "install ok installed")
-if [ "" == "$PKG_OK" ]; then
-    echo "Install git..."
-    sudo apt-get git
-    clear
-else
-    echo "Git is already installed"
-fi
+#PKG_OK=$(dpkg-query -W --showformat='${Status}\n' git |grep "install ok installed")
+#if [ "" == "$PKG_OK" ]; then
+#    echo "Install git..."
+#    sudo apt-get git
+#    clear
+#else
+#    echo "Git is already installed"
+#fi
+
+git clone https://github.com/laurianemollier/software-factory-website.git
+
+
 
 # heroku
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
@@ -90,4 +94,3 @@ sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --use
 
 
 
-git clone https://github.com/laurianemollier/software-factory-website.git

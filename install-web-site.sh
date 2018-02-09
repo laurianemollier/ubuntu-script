@@ -79,7 +79,7 @@ sudo -i -u postgres createdb software_factory
 sudo apt-get update
 
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD '123123';"
-sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --username=postgres --owner=postgres --no-password
+sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --username=postgres
 
 
 

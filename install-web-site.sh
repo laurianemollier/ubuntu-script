@@ -82,7 +82,15 @@ sudo -u postgres psql -c "ALTER USER postgres PASSWORD '123123';"
 sudo -i -u postgres createdb software-factory --host=localhost --port=5432 --username=postgres
 
 
+PATH_SAMPLE="software-factory-website"
+mkdir "$PATH_SAMPLE"
 
+clear
+echo "Compile and run the website..."
+(cd "$PATH_SAMPLE" ;
+    sbt compile
+    sbt run
+)
 
 
 
